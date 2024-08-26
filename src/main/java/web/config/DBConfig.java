@@ -24,16 +24,6 @@ public class DBConfig {
     @Autowired
     private Environment env;
 
-//    @Bean
-//    public DataSource getDataSource() {
-//        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-//        dataSource.setDriverClassName(env.getProperty("db.driver"));
-//        dataSource.setUrl(env.getProperty("db.url"));
-//        dataSource.setUsername(env.getProperty("db.username"));
-//        dataSource.setPassword(env.getProperty("db.password"));
-//        return dataSource;
-//    }
-
     @Bean
     public DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -44,21 +34,7 @@ public class DBConfig {
         return dataSource;
     }
 
-//    @Bean
-//    public LocalContainerEntityManagerFactoryBean getEntityManagerFactory() {
-//        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-//        em.setDataSource(getDataSource());
-//        em.setPackagesToScan("web");
-//        em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
-//
-//        Properties properties = new Properties();
-//        properties.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
-//        properties.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
-//        properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
-//
-//        em.setJpaProperties(properties);
-//        return em;
-//    }
+
 @Bean
 public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
     LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
@@ -78,12 +54,6 @@ public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
     return em;
 }
 
-    //    @Bean
-//    public JpaTransactionManager transactionManager() {
-//        JpaTransactionManager transactionManager = new JpaTransactionManager();
-//        transactionManager.setEntityManagerFactory(getEntityManagerFactory().getObject());
-//        return transactionManager;
-//    }
     @Bean
     public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
