@@ -70,12 +70,12 @@
       <version>5.0.0</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>jakarta.servlet.jsp</groupId>
-      <artifactId>jakarta.servlet.jsp-api</artifactId>
-      <version>3.0.0</version>
-      <scope>provided</scope>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>jakarta.servlet.jsp</groupId>-->
+<!--      <artifactId>jakarta.servlet.jsp-api</artifactId>-->
+<!--      <version>3.0.0</version>-->
+<!--      <scope>provided</scope>-->
+<!--    </dependency>-->
 
     <!-- SLF4J and Logback dependencies -->
 <!--    <dependency>-->
@@ -90,11 +90,11 @@
 <!--    </dependency>-->
 
     <!-- javax.persistence dependency -->
-    <dependency>
-      <groupId>javax.persistence</groupId>
-      <artifactId>javax.persistence-api</artifactId>
-      <version>2.2</version>
-    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>javax.persistence</groupId>-->
+<!--      <artifactId>javax.persistence-api</artifactId>-->
+<!--      <version>2.2</version>-->
+<!--    </dependency>-->
   </dependencies>
 
   <build>
